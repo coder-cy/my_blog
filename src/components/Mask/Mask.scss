@@ -1,0 +1,24 @@
+@keyframes ani {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(2000px);
+    }
+}
+
+#mask_container {
+    position: fixed;
+    left: 0;
+    top: 36px;
+    width: 100%;
+    height: 100%;
+    .block {
+        width: 100%;
+        height: 10%;
+        background: rgb(255, 211, 57);
+    }
+    .move {
+
+    }
+}
