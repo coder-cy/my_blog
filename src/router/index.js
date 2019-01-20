@@ -5,7 +5,7 @@ import Head from '../components/Head/Head';
 import Home from '../views/Home/Home.js';
 import Work from '../views/Work/Work.jsx';
 import Gallery from '../views/Gallery/Gallery.jsx';
-import Mask from '../components/Mask/Mask.js';
+// import Mask from '../components/Mask/Mask.js';
 
 class Main extends React.Component {
     constructor() {
@@ -31,7 +31,7 @@ class Main extends React.Component {
                         <Route path="/work" exact component={Work} />
                         <Route path="/gallery" exact component={Gallery} />
                     </Switch>
-                    <Mask />
+                    {/* <Mask /> */}
                 </main>
             </div>
         );

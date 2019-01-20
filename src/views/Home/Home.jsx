@@ -12,6 +12,7 @@ class Home extends React.Component {
     }
     componentDidMount() {
         this.foo();
+        this.initHeight();
         // this.routeListener && this.routeListener();
         // const routeListener = this.props.history.listen((location, action) => {
         //     console.log(action, location.pathname, location.state)
@@ -19,13 +20,14 @@ class Home extends React.Component {
         // this.setState({
         //     routeListener
         // });
-        document.getElementById("home_body").style.height = document.documentElement.clientHeight - 36 + "px";
     }
     foo() {
         console.log(this.props);
         this.props.fetchSliderImg();
-    } 
-
+    }
+    initHeight() {
+        document.getElementById("home_body").style.height = document.documentElement.clientHeight - 36 + "px";
+    }
     render() {
         return (
             <div id="home_container">

@@ -24,23 +24,23 @@ class Head extends React.Component {
             timer
         });
     }
-    handleChangeRoute(i) {
-        setTimeout(() => {
-            this.props.history.push(this.state.navList[i].href);
-        }, 1000);
-        // console.log(this.props);
-        this.props.setIsShowMask(true);
-    }
+    // handleChangeRoute(i) {
+    //     setTimeout(() => {
+    //         this.props.history.push(this.state.navList[i].href);
+    //     }, 1000);
+    //     // console.log(this.props);
+    //     this.props.setIsShowMask(true);
+    // }
     render() {
         const { navList, date } = this.state;
         return (
             <header id="header_container">
                 <nav className="clear_float">
-                    {
-                        navList.map((nav, i) => (
-                            <div className="nav_btn" key={i} onClick={this.handleChangeRoute.bind(this, i)}>{nav.name}</div>
-                        ))
-                    }
+                {
+                    navList.map((nav, i) => (
+                        <Link to={nav.href} className="nav_btn" key={i}>{nav.name}</Link>
+                    ))
+                }
                 </nav>
                 <div className="clock">
                     <span>{this.add0(date.getHours())}</span>:
