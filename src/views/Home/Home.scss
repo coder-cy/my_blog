@@ -1,6 +1,17 @@
 #home_container {
-    #home_body {
-        height: 100%;
-        background: pink;
+    .bg_default {
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .content_block {
+        @extend .bg_default;
+        height: 600px;
+    }
+    #nav_btn {
+        position: fixed;
+        left: 45px;
+        top: 45px;
+        width: 50px;
+        height: 50px;
     }
 }

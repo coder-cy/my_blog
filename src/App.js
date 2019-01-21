@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Router from './router';
+import Home from "./views/Home/Home.js";
 import "./App.scss";
 
-export default () => <Router />;
+export default () => <Home />;

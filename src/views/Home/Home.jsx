@@ -1,8 +1,7 @@
 import React from 'react';
+import NavMask from '../../components/NavMask/NavMask.jsx';
 import './Home.scss';
-import Head from '../../components/Head/Head.jsx';
-import { withRouter } from 'react-router-dom';
-
+import bg0 from '../../assets/images/bg0.jpg';
 class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -12,29 +11,23 @@ class Home extends React.Component {
     }
     componentDidMount() {
         this.foo();
-        this.initHeight();
-        // this.routeListener && this.routeListener();
-        // const routeListener = this.props.history.listen((location, action) => {
-        //     console.log(action, location.pathname, location.state)
-        // });
-        // this.setState({
-        //     routeListener
-        // });
     }
     foo() {
         console.log(this.props);
         this.props.fetchSliderImg();
     }
     initHeight() {
-        document.getElementById("home_body").style.height = document.documentElement.clientHeight - 36 + "px";
+        // document.getElementById("home_body").style.height = document.documentElement.clientHeight - 36 + "px";
     }
     render() {
         return (
-            <div id="home_container">
-                <div id="home_body">
-                Home
-                </div>
-            </div>
+            <main id="home_container">
+                <i id="nav_btn"></i>
+                <div style={{backgroundImage: 'url(' + bg0 + ')'}} class="content_block"></div>
+                <div class="content_block"></div>
+                <div class="content_block"></div>
+                <NavMask />
+            </main>
         );
     }
 }
