@@ -9,9 +9,38 @@
     }
     #nav_btn {
         position: fixed;
+        z-index: 10;
         left: 45px;
         top: 45px;
         width: 50px;
-        height: 50px;
+        height: 40px;
+        // background: #000;
+        span {
+            display: block;
+            height: 3px;
+            margin-bottom: 9px;
+            background: #fff;
+            transition: .5s;
+            // transform: rotateZ(45deg);
+            // transform: rotateZ(-45deg);
+            transform-origin: 0%;
+        }
+        span:nth-of-type(1) {
+            margin-top: 5px;
+        }
+        .hide {
+            opacity: 0;
+        }
+        .x1 {
+            transform: translateY(30px) rotateZ(-45deg);
+            background: red;
+        }
+        .x2 {
+            transform: translateY(-30px) rotateZ(45deg);
+            background: red;
+        }
+    }
+    #nav_btn:hover {
+        cursor: pointer;
     }
 }

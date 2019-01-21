@@ -6,7 +6,7 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            routeListener: null,
+            isShowMask: false,
         }
     }
     componentDidMount() {
@@ -19,14 +19,24 @@ class Home extends React.Component {
     initHeight() {
         // document.getElementById("home_body").style.height = document.documentElement.clientHeight - 36 + "px";
     }
+    showNavMask() {
+        console.log(this)
+        this.setState({
+            isShowMask: !this.state.isShowMask,
+        });
+    }
     render() {
         return (
             <main id="home_container">
-                <i id="nav_btn"></i>
-                <div style={{backgroundImage: 'url(' + bg0 + ')'}} class="content_block"></div>
-                <div class="content_block"></div>
-                <div class="content_block"></div>
-                <NavMask />
+                <div onClick={this.showNavMask.bind(this)} id="nav_btn">
+                    <span className={this.state.isShowMask ? 'x1' : ''}></span>
+                    <span className={this.state.isShowMask ? 'hide' : ''}></span>
+                    <span className={this.state.isShowMask ? 'x2' : ''}></span>
+                </div>
+                <div style={{backgroundImage: 'url(' + bg0 + ')'}} className="content_block"></div>
+                <div className="content_block"></div>
+                <div className="content_block"></div>
+                <NavMask isShowMask={this.state.isShowMask} />
             </main>
         );
     }

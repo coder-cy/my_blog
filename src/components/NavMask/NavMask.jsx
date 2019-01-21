@@ -8,10 +8,10 @@ export default class NavMask extends React.Component {
     }
     render() {
         return (
-            <div id="nav_mask_container"></div>
+            <div style={{display: this.props.isShowMask ? 'block' : 'none'}} id="nav_mask_container"></div>
         );
     }
-    handleClick() {
-        
+    componentDidMount() {
+        document.getElementById('nav_mask_container').style.height = document.documentElement.clientHeight + 'px';
     }
 }
