@@ -7,14 +7,32 @@ import broadcast0 from "../../assets/images/broadcast0.png";
 import service0 from "../../assets/images/service0.png";
 import football0 from "../../assets/images/football0.png";
 
-// import
+const bgPicList = [
+  require("../../assets/images/bg0.jpg"),
+  require("../../assets/images/bg1.jpg"),
+  require("../../assets/images/bg2.png"),
+  require("../../assets/images/bg3.png"),
+  require("../../assets/images/bg4.jpg"),
+  require("../../assets/images/bg5.jpg"),
+  require("../../assets/images/bg6.jpg"),
+  require("../../assets/images/bg7.jpg")
+];
+const bgIndexList = [];
+for (let i = 0; i < 100; i++) {
+  bgIndexList.push(i);
+}
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isShowMask: false,
       isShowProjDetails: false,
-      h: 0,
+      h: document.documentElement.clientHeight,
+      w: document.documentElement.clientWidth,
+      bgPicList,
+      bgIndexList,
+      curBgIndex: 0,
       skillList: [
         {
           title: "Basical Skills",
@@ -68,23 +86,23 @@ class Home extends React.Component {
     };
   }
   componentDidMount() {
-    this.foo();
-    this.initHeight();
+    // this.foo();
+    // this.initHeight();
   }
   foo() {
     console.log(this.props);
     this.props.fetchSliderImg();
   }
-  initHeight() {
-    this.setState({
-      h: document.documentElement.clientHeight
-    });
-    // window.addEventListener('resize', () => {
-    //     this.setState({
-    //       h: document.documentElement.clientHeight
-    //     });
-    // });
-  }
+  //   initHeight() {
+  //     this.setState({
+  //       h: document.documentElement.clientHeight
+  //     });
+  //     // window.addEventListener('resize', () => {
+  //     //     this.setState({
+  //     //       h: document.documentElement.clientHeight
+  //     //     });
+  //     // });
+  //   }
   showNavMask() {
     this.setState({
       isShowMask: !this.state.isShowMask
@@ -127,14 +145,31 @@ class Home extends React.Component {
           <span className={this.state.isShowMask ? "hide" : ""} />
           <span className={this.state.isShowMask ? "x2" : ""} />
         </div>
+        {/* <div style={{backgroundImage: "url(" + bg0 + ")",height: this.state.h + "px"}} className="content_block" id="block_1"> */}
         <div
-          style={{
-            backgroundImage: "url(" + bg0 + ")",
-            height: this.state.h + "px"
-          }}
+          style={{ height: this.state.h + "px" }}
           className="content_block"
           id="block_1"
-        />
+        >
+          {this.state.bgIndexList.map((field, i) => {
+            return (
+              <div
+                style={{
+                  left: this.state.w / 10 * (i % 10) + "px",
+                  top: this.state.h / 10 * Math.floor(i / 10) + "px",
+                  width: this.state.w / 10 + "px",
+                  height: this.state.h / 10 + "px",
+                  backgroundImage: `url(${bgPicList[0]})`,
+                  backgroundPosition: ``,
+                }}
+                key={i}
+                className="bg_field"
+              >
+                {field}
+              </div>
+            );
+          })}
+        </div>
         <div
           className="content_block"
           style={{ height: this.state.h + "px" }}

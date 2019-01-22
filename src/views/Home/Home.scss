@@ -5,10 +5,16 @@
     }
     .content_block {
         @extend .bg_default;
-        height: 600px;
     }
     #block_1 {
-
+        position: relative;
+        .bg_field {
+            position: absolute;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            background-repeat: no-repeat;
+            transition: .5s;
+        }
     }
     #block_2 {
         position: relative;
