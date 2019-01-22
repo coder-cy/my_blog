@@ -27,6 +27,11 @@ class Home extends React.Component {
     this.setState({
       h: document.documentElement.clientHeight
     });
+    // window.addEventListener('resize', () => {
+    //     this.setState({
+    //       h: document.documentElement.clientHeight
+    //     });
+    // });
   }
   showNavMask() {
     this.setState({
@@ -48,16 +53,17 @@ class Home extends React.Component {
           }}
           className="content_block"
           id="block_1"
-        />
-        <div className="content_block" id="block_2">
+        >
+        </div>
+        <div className="content_block" style={{height: this.state.h + "px"}} id="block_2">
           <div className="self_intro">
             <div className="about_me">ABOUT ME</div>
             <p>
               My name is Yang Tsai from Shanghai China, I've been working as a
               front-end developer for 3 years in Shanghai. To achieve my dream I
               decide to have a new beginning in Germany, I mean, both in life
-              and career. As you heared I can speak English fluently, meanwhile
-              I'm a person love to talk and easy going with. I love coding,
+              and career. I speak English fluently, meanwhile
+              I'm a person who love to talk ,easy going with and learning German strenuously. I love coding,
               which may be one of the most fantastic jobs in my thought.
             </p>
           </div>
@@ -84,7 +90,15 @@ class Home extends React.Component {
             </ul>
           </div>
         </div>
-        <div className="content_block" id="block_3" />
+        <div className="content_block" id="block_3" style={{height: this.state.h + "px"}}>
+            <div className="project_title">
+                <div>MY LATEST WORK</div>
+                <p>A selection of recent projects I've been working on, which includes homepage, responsive mobile WebApp, IM WebApp, CMS, broadcasting-show website and so on.</p>
+            </div>
+            <div className="project_details">
+
+            </div>
+        </div>
         <NavMask isShowMask={this.state.isShowMask} />
       </main>
     );
