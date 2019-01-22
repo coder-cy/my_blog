@@ -26,7 +26,6 @@ export default class ProjDetails extends React.Component {
                         <dd style={{transform: `rotateY(180deg) translateZ(600px)`}} className="item">4</dd>
                         <dd style={{transform: `rotateY(240deg) translateZ(600px)`}} className="item">5</dd>
                         <dd style={{transform: `rotateY(300deg) translateZ(600px)`}} className="item">6</dd>
-                        
                     </dl>
                 </div>
 
