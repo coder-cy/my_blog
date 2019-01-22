@@ -1,19 +1,29 @@
 #proj_details_mask_container {
     position: fixed;
+    display: none;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, .3);
     width: 100%;
+    background: rgba(0, 0, 0, .3);
     .cancel {
         position: absolute;
         right: 50px;
         top: 50px;
-        width: 30px;
-        height: 30px;
-        background: pink;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 50px;
+        text-align: center;
+        background: transparent;
+        color: #fff;
+        font-family: 'Lato', Helvetica, Arial, sans-serif;
+        font-style: normal;
+        border-radius: 50%;
+        border: 2px solid #fff;
     }
     .cancel:hover {
         cursor: pointer;
+
     }
     .container {
         position: absolute;
@@ -37,11 +47,25 @@
                 font-size: 200px;
                 line-height: 200px;
                 text-align: center;     
-                margin-left: -250px;
-                margin-top: -300px;
-                width: 500px;
-                height: 600px;
-                background-color: skyblue;
+                margin-left: -200px;
+                margin-top: -150px;
+                width: 200%;
+                height: 150%;
+                transition: 1s;
+                border: 1px solid #fff;
+                img {
+                    width: 70%;
+                    height: 100%;
+                }
+                ul {
+                    display: inline-block;
+                    width: 30%;
+                    height: 100%;
+                    background: #000;
+                    li {
+
+                    }
+                }
             }
         }
     }
