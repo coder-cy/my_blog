@@ -1,22 +1,13 @@
 import React from "react";
-import NavMask from "../../components/NavMask/NavMask.jsx";
 import ProjDetails from "../../components/ProjDetails/ProjDetails.jsx";
+import MyVideo from "../../components/MyVideo/MyVideo.jsx"
+import Clock from "../../components/Clock/Clock.jsx";
 import "./Home.scss";
 import blackboard from "../../assets/images/blackboard.jpg";
 import broadcast0 from "../../assets/images/broadcast0.png";
 import service0 from "../../assets/images/service0.png";
 import football0 from "../../assets/images/football0.png";
 
-const bgPicList = [
-  require("../../assets/images/bg0.png"),
-  require("../../assets/images/bg1.jpg"),
-  require("../../assets/images/bg2.png"),
-  require("../../assets/images/bg3.png"),
-  require("../../assets/images/bg4.png"),
-  require("../../assets/images/bg5.png"),
-  require("../../assets/images/bg6.png"),
-  require("../../assets/images/bg7.png")
-];
 const bgIndexList = [];
 for (let i = 0; i < 100; i++) {
   bgIndexList.push(i);
@@ -28,13 +19,10 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isShowMask: false,
       isShowProjDetails: false,
       h: document.documentElement.clientHeight,
       w: document.documentElement.clientWidth,
-      bgPicList,
       bgIndexList,
-      curBgIndex: 0,
       isBgBroken: true,
       skillList: [
         {
@@ -66,64 +54,303 @@ class Home extends React.Component {
         {
           title: "Broadcast show",
           isShow: false,
-          intro: "",
+          intro:
+            "Tech stack: Vue/TypeScript/React/Redux",
           main: broadcast0,
           subList: [
-            require("../../assets/images/broadcast1.png"),
-            require("../../assets/images/broadcast2.png"),
-            require("../../assets/images/broadcast3.png"),
-            require("../../assets/images/broadcast4.png"),
-            require("../../assets/images/broadcast5.png"),
-            require("../../assets/images/broadcast6.png"),
+            {
+              src: require("../../assets/images/broadcast1.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me, the pictures are only samples."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the broadcast room(PC), including following, charging, watching living vidio, chatting, sending gift and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/broadcast2.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me, the pictures are only samples."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the homepage(PC), including hot show selection, square and room searching."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/broadcast3.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me, the pictures are only samples."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the homepage(Mobile), including hot show selection and square."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/broadcast4.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me, the pictures are only samples."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the userpage(Mobile), including followers, charging, show & modify personal information and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/broadcast5.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me, the pictures are only samples."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the broadcast room(Mobile), including following, charging, watching living vidio, chatting, sending gift and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/broadcast6.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me, the pictures are only samples."
+                },
+                {
+                  title: "Intro",
+                  content: "This is the broadcast room(Mobile)"
+                }
+              ]
+            }
           ]
         },
         {
           title: "IM service",
           isShow: false,
-          intro: "",
+          intro: "Tech stack: React/Redux",
           main: service0,
           subList: [
-            require("../../assets/images/service1.png"),
-            require("../../assets/images/service2.png"),
-            require("../../assets/images/service3.png"),
-            require("../../assets/images/service4.png"),
-            require("../../assets/images/service5.png"),
-            require("../../assets/images/service6.png"),
+            {
+              src: require("../../assets/images/service1.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the guest-end terminal, including selection of services, robot query, sumitting form and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/service2.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the chatting function of guest-end, including sending and receiving message that includes text, speech and picture, auto hint-show and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/service3.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the chatting function of guest-end, same as above."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/service4.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the score function, which means the user can submit his attitude towards ther service."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/service5.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the sevice-end terminal, including multiple chatting, recording content, transferring to others and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/service6.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content: "This is the login page, including login function,"
+                }
+              ]
+            }
           ]
         },
         {
           title: "Football games homepage",
           isShow: false,
-          intro: "",
+          intro: "Tech stack: Vue/TypeScript",
           main: football0,
           subList: [
-            require("../../assets/images/football1.png"),
-            require("../../assets/images/football2.png"),
-            require("../../assets/images/football3.png"),
-            require("../../assets/images/football4.png"),
-            require("../../assets/images/football5.png"),
-            require("../../assets/images/football6.png"),
+            {
+              src: require("../../assets/images/football1.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "Only user-favorite and sound-play modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the game score page, including living score-change, sound-play, user-favorite and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/football2.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "Only chatting module was developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the living game page, including chatting, formation display and information broadcast."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/football3.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the football library page, including a 3F tree selection, a carousel and a league-displayed block which allows user to select by initial of name."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/football4.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the league details page of league class, including display of information, selecting by season and round, query pts-ranking and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/football5.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "All of modules were developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the league details page of cup class, including display of information, selecting by season and round, query pts-ranking and so on."
+                }
+              ]
+            },
+            {
+              src: require("../../assets/images/football6.png"),
+              details: [
+                {
+                  title: "Module",
+                  content:
+                    "Only comment module was developed by me and the picures are true screenshot of the project."
+                },
+                {
+                  title: "Intro",
+                  content:
+                    "This is the game news page, including display of news, comment and so on."
+                }
+              ]
+            }
           ]
         }
       ],
-      curShowProjPicList: []
+      curShowProjPicList: [],
+      curMainInfo: "",
     };
   }
   componentDidMount() {
     this.onWindowScroll();
-    this.autoPlayBg();
-  }
-  autoPlayBg() {
-    setInterval(() => {
-      let curBgIndex = this.state.curBgIndex;
-      curBgIndex++;
-      if (curBgIndex > bgPicList.length - 1) {
-        curBgIndex = 0;
-      }
-      this.setState({
-        curBgIndex,
-      });
-    }, 15000);
   }
   onWindowScroll() {
     const tar1 = this.state.h - 200;
@@ -131,31 +358,23 @@ class Home extends React.Component {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= tar2) {
         if (!this.state.isBgBroken) {
-          // console.log("bottom");
           this.setState({
             isBgBroken: true
           });
         }
       } else if (window.scrollY >= tar1) {
         if (this.state.isBgBroken) {
-          // console.log("middle");
           this.setState({
             isBgBroken: false
           });
         }
-      } else{
+      } else {
         if (!this.state.isBgBroken) {
-          // console.log("top");
           this.setState({
             isBgBroken: true
           });
         }
       }
-    });
-  }
-  showNavMask() {
-    this.setState({
-      isShowMask: !this.state.isShowMask
     });
   }
   toggleProjMask(index, type) {
@@ -173,11 +392,10 @@ class Home extends React.Component {
     });
   }
   showProjDetails(index) {
-    console.log(index);
-    console.log(this.state.projectList);
     this.setState({
       isShowProjDetails: true,
       curShowProjPicList: this.state.projectList[index].subList,
+      curMainInfo: this.state.projectList[index].intro,
     });
   }
   hideProjDetails() {
@@ -185,54 +403,62 @@ class Home extends React.Component {
       isShowProjDetails: false
     });
   }
-  switchBgPic() {
-  }
   render() {
-    const defaultStyle = "translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+    const defaultStyle =
+      "translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
     return (
       <main id="home_container">
         <div
-          onClick={() => {
-            this.showNavMask();
+          style={{
+            backgroundImage: `url(${require("../../assets/images/bg0.png")})`,
+            height: this.state.h + "px",
+            opacity: this.state.isShowProjDetails ? '0.2' : '1',
           }}
-          id="nav_btn"
+          className="content_block"
+          id="block_1"
         >
-          <span className={this.state.isShowMask ? "x1" : ""} />
-          <span className={this.state.isShowMask ? "hide" : ""} />
-          <span className={this.state.isShowMask ? "x2" : ""} />
-        </div>
-        <div style={{ backgroundImage: `url(${bgPicList[this.state.curBgIndex]})`, height: this.state.h + "px" }} className="content_block" id="block_1">
-
+            <Clock />
+            <MyVideo />
         </div>
         <div
           className="content_block"
-          // style={{ height: this.state.h + "px" }}
+          style={{opacity: this.state.isShowProjDetails ? '0.2' : '1'}}
           id="block_2"
         >
-          {
-            this.state.bgIndexList.map((field, i) => {
-              return (
-                <div
-                  style={{
-                    left: this.state.w / 10 * (i % 10) + "px",
-                    top: 90 * Math.floor(i / 10) + "px",
-                    width: this.state.w / 10 + "px",
-                    height: 90 + "px",
-                    backgroundImage: `url(${blackboard})`,
-                    backgroundPosition: `-${this.state.w / 10 * (i % 10)}px -${90 * Math.floor(i / 10)}px`,
-                    transform: this.state.isBgBroken ? `translate3d(${getRandom(500, 1000) * (0.5 - Math.random()) * 2}px,${getRandom(500, 1000) * (0.5 - Math.random()) * 2}px,${getRandom(1000, 2000)}px) rotateX(${getRandom(0, 360)}deg) rotateY(${getRandom(0, 360)}deg) rotateZ(${getRandom(0, 360)}deg)` : defaultStyle,
-                    opacity: `${this.state.isBgBroken ? 0 : 1}`,
-                  }}
-                  key={i}
-                  className="bg_field"
-                >
-                </div>
-              );
-            })
-          }
+          {this.state.bgIndexList.map((field, i) => {
+            return (
+              <div
+                style={{
+                  left: (this.state.w / 10) * (i % 10) + "px",
+                  top: 90 * Math.floor(i / 10) + "px",
+                  width: this.state.w / 10 + "px",
+                  height: 90 + "px",
+                  backgroundImage: `url(${blackboard})`,
+                  backgroundPosition: `-${(this.state.w / 10) *
+                    (i % 10)}px -${90 * Math.floor(i / 10)}px`,
+                  transform: this.state.isBgBroken
+                    ? `translate3d(${getRandom(500, 1000) *
+                        (0.5 - Math.random()) *
+                        2}px,${getRandom(500, 1000) *
+                        (0.5 - Math.random()) *
+                        2}px,${getRandom(1000, 2000)}px) rotateX(${getRandom(
+                        0,
+                        360
+                      )}deg) rotateY(${getRandom(
+                        0,
+                        360
+                      )}deg) rotateZ(${getRandom(0, 360)}deg)`
+                    : defaultStyle,
+                  opacity: `${this.state.isBgBroken ? 0 : 1}`
+                }}
+                key={i}
+                className="bg_field"
+              />
+            );
+          })}
           <div className="self_intro">
-            <div className="about_me">ABOUT ME</div>
-            <p>
+            <div style={{color: this.state.isBgBroken ? '#000' : '#fff'}} className="about_me">ABOUT ME</div>
+            <p style={{color: this.state.isBgBroken ? '#000' : '#fff'}}>
               My name is Yang Tsai from Shanghai China, I've been working as a
               front-end developer for 3 years in Shanghai. To achieve my dream I
               decide to have a new beginning in Germany, I mean, both in life
@@ -247,7 +473,7 @@ class Home extends React.Component {
               {this.state.skillList.map((skill, i) => {
                 return (
                   <li key={i}>
-                    <dl>
+                    <dl style={{color: this.state.isBgBroken ? '#000' : '#fff'}}>
                       <dt>{skill.title}</dt>
                       {skill.contentList.map((content, j) => {
                         return <dd key={j}>{content}</dd>;
@@ -262,9 +488,9 @@ class Home extends React.Component {
         <div
           className="content_block"
           id="block_3"
-        // style={{ height: this.state.h + "px" }}
+          style={{opacity: this.state.isShowProjDetails ? '0.2' : '1'}}
         >
-          <div className="project_title">
+          <div style={{opacity: this.state.isBgBroken ? '1' : '0'}} className="project_title">
             <div>MY LATEST WORK</div>
             <p>
               A selection of recent projects I've been working on, which
@@ -272,7 +498,7 @@ class Home extends React.Component {
               broadcasting-show website and so on.
             </p>
           </div>
-          <div className="project_details">
+          <div style={{opacity: this.state.isBgBroken ? '1' : '0'}} className="project_details">
             <dl>
               {this.state.projectList.map((project, i) => {
                 return (
@@ -287,7 +513,6 @@ class Home extends React.Component {
                     }}
                   >
                     <span className="proj_title">{project.title}</span>
-                    <span className="proj_intro">{project.intro}</span>
                     <div
                       className={["mask", project.isShow ? "show" : ""].join(
                         " "
@@ -309,10 +534,10 @@ class Home extends React.Component {
             </dl>
           </div>
         </div>
-        <NavMask isShowMask={this.state.isShowMask} />
         <ProjDetails
           isShowProjDetails={this.state.isShowProjDetails}
           curShowProjPicList={this.state.curShowProjPicList}
+          curMainInfo={this.state.curMainInfo}
           hideProjDetails={() => {
             this.hideProjDetails();
           }}

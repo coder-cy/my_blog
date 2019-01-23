@@ -1,0 +1,44 @@
+#clock_container {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    .dots {
+        transform: translateX(100px);
+        div {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            transform-origin: 0px 100px;
+        }
+    }
+    .needles {
+        div {
+            position: absolute;
+            transform-origin: center bottom;
+            background: #fff;
+        }
+        .hour {
+            left: 100px;
+            top: 60px;
+            width: 1px;
+            height: 40px;
+        }
+        .min {
+            left: 100px;
+            top: 40px;
+            width: 1px;
+            height: 60px;
+        }
+        .sec {
+            left: 100px;
+            top: 20px;
+            width: 1px;
+            height: 80px;
+        }
+    }
+}

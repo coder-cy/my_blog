@@ -1,0 +1,9 @@
+#my_video_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.8);
+}
