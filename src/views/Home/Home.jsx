@@ -1,7 +1,8 @@
 import React from "react";
 import ProjDetails from "../../components/ProjDetails/ProjDetails.jsx";
-import MyVideo from "../../components/MyVideo/MyVideo.jsx"
-import Clock from "../../components/Clock/Clock.jsx";
+// import MyVideo from "../../components/MyVideo/MyVideo.jsx"
+// import Clock from "../../components/Clock/Clock.jsx";
+import Desktop from "../../components/Desktop/Desktop.jsx";
 import "./Home.scss";
 import blackboard from "../../assets/images/blackboard.jpg";
 import broadcast0 from "../../assets/images/broadcast0.png";
@@ -14,6 +15,9 @@ for (let i = 0; i < 100; i++) {
 }
 const getRandom = (m, n) => {
   return Math.floor(Math.random() * (n - m + 1) + m);
+};
+const getRandomDir = () => {
+  return [-1, 1][getRandom(0, 1)];
 };
 const defaultStyle =
   "translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
@@ -418,15 +422,16 @@ class Home extends React.Component {
       <main id="home_container">
         <div
           style={{
-            backgroundImage: `url(${require("../../assets/images/bg0.png")})`,
+            backgroundImage: `url(${require("../../assets/images/bg0.jpg")})`,
             height: this.state.h + "px",
             opacity: this.state.isShowProjDetails ? '0.2' : '1',
           }}
           className="content_block"
           id="block_1"
         >
-            <Clock />
-            <MyVideo />
+          <Desktop />
+            {/* <Clock />
+            <MyVideo /> */}
         </div>
         <div
           className="content_block"
@@ -445,11 +450,9 @@ class Home extends React.Component {
                   backgroundPosition: `-${(this.state.w / 10) *
                     (i % 10)}px -${90 * Math.floor(i / 10)}px`,
                   transform: this.state.isBgBroken
-                    ? `translate3d(${getRandom(500, 1000) *
-                        (0.5 - Math.random()) *
-                        2}px,${getRandom(500, 1000) *
-                        (0.5 - Math.random()) *
-                        2}px,${getRandom(1000, 2000)}px) rotateX(${getRandom(
+                    ? `translate3d(${getRandom(1000, 1500) *
+                      getRandomDir()}px,${getRandom(1000, 1500) *
+                        getRandomDir()}px,${getRandom(1000, 1500)}px) rotateX(${getRandom(
                         0,
                         360
                       )}deg) rotateY(${getRandom(
@@ -526,14 +529,13 @@ class Home extends React.Component {
                         " "
                       )}
                     >
-                      <span className="mask_details">Details</span>
                       <span
                         className="mask_btn"
                         onClick={() => {
                           this.showProjDetails(i);
                         }}
                       >
-                        Click here
+                        More...
                       </span>
                     </div>
                   </dd>

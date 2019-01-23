@@ -20,7 +20,7 @@
             position: absolute;
             box-sizing: border-box;
             background-repeat: no-repeat;
-            transition: 1s;
+            transition: 1.5s;
             font-size: 0;
         }
         .self_intro {
@@ -38,7 +38,7 @@
                 // font-family: 'Lato', Helvetica, Arial, sans-serif;
                 font-family: 'Lato', Helvetica, Arial, sans-serif;
                 // color: #f8f8f8;
-                transition: 1.2s;
+                transition: 1.5s;
             }
             p {
                 position: absolute;
@@ -47,7 +47,7 @@
                 line-height: 40px;
                 font-family: 'Lato', Helvetica, Arial, sans-serif;
                 // color: #fff;
-                transition: 1.2s;
+                transition: 1.5s;
             }
         }
         .self_skill {
@@ -156,13 +156,13 @@
                         background: rgba(0,0,0,.7);
                         opacity: 0;
                         transition: 1s;
-                        .mask_details {
-                            position: absolute;
-                            left: 50%;
-                            top: 38%;
-                            transform: translateX(-50%);
-                            color: #fff;                 
-                        }
+                        // .mask_details {
+                        //     position: absolute;
+                        //     left: 50%;
+                        //     top: 38%;
+                        //     transform: translateX(-50%);
+                        //     color: #fff;                 
+                        // }
                         .mask_btn {
                             position: absolute;
                             left: 50%;
