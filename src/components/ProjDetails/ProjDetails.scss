@@ -1,6 +1,5 @@
 #proj_details_mask_container {
     position: fixed;
-    // display: none;
     left: 0;
     top: 0;
     width: 100%;
@@ -9,7 +8,7 @@
     .cancel {
         position: absolute;
         right: 50px;
-        top: 50px;
+        top: 30px;
         width: 60px;
         height: 60px;
         line-height: 60px;
@@ -28,7 +27,7 @@
     .mainInfo {
         position: absolute;
         left: 50%;
-        top: 15%;
+        top: 5%;
         transform: translateX(-50%);
         color: #f8f8f8;
         font-size: 30px;
@@ -43,10 +42,20 @@
         margin-left: -500px;
         margin-top: -250px;
         perspective: 5000px;
+        .btn {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+        }
+        .btn:nth-of-type(2) {
+            left: 50%;
+        }
         .items {
             width: 200px;
             height: 200px;
-            margin: 200px auto;
+            margin: 250px auto;
             transform-style: preserve-3d;
             transition: 1s;
             .item {           

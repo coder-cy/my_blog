@@ -21,6 +21,8 @@ export default class ProjDetails extends React.Component {
                 <i onClick={() => {this.props.hideProjDetails()}} className="cancel">X</i>
                 <div className="mainInfo">{this.props.curMainInfo}</div>
                 <div className="container">
+                    <div onClick={() => {this.handleRotate(-1)}} className="btn"></div>
+                    <div onClick={() => {this.handleRotate(1)}} className="btn"></div>
                     <dl style={{transform: `rotateY(${-this.state.degree}deg)`}} className="items">
                     {
                         this.props.curShowProjPicList.map((proj, i) => {

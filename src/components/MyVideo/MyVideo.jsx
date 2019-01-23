@@ -10,9 +10,9 @@ export default class MyVideo extends React.Component {
     render() {
         return (
             <div id="my_video_container">
-                <Video autoPlay="true"
+                <Video autoPlay={false}
                     controls={[]}
-                    poster="http://video-js.zencoder.com/oceans-clip.png"
+                    poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548256110919&di=bfa121c6519ba1d61d80449a43d5f480&imgtype=0&src=http%3A%2F%2Fupload.shunwang.com%2F2016%2F0526%2F1464230456256.jpg"
                     onCanPlayThrough={() => {
                         // Do stuff
                     }}>

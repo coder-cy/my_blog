@@ -15,6 +15,8 @@ for (let i = 0; i < 100; i++) {
 const getRandom = (m, n) => {
   return Math.floor(Math.random() * (n - m + 1) + m);
 };
+const defaultStyle =
+  "translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -351,6 +353,14 @@ class Home extends React.Component {
   }
   componentDidMount() {
     this.onWindowScroll();
+    this.initScreen();
+  }
+  initScreen() {
+    window.addEventListener("resize", () => {
+      this.setState({
+        w: document.documentElement.clientWidth,
+      });
+    })
   }
   onWindowScroll() {
     const tar1 = this.state.h - 200;
@@ -404,8 +414,6 @@ class Home extends React.Component {
     });
   }
   render() {
-    const defaultStyle =
-      "translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
     return (
       <main id="home_container">
         <div

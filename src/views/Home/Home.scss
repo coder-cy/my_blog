@@ -1,5 +1,8 @@
 #home_container {
     overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 30px rgba(0,0,0,.1);
     .content_block {
         height: 900px;
         transition: 2s;
@@ -14,7 +17,6 @@
         position: relative;
         perspective: 2000px;
         .bg_field {
-            perspective: 2000px;
             position: absolute;
             box-sizing: border-box;
             background-repeat: no-repeat;
@@ -87,7 +89,6 @@
     #block_3 {
         position: relative;
         padding-bottom: 200px;
-        background: rgba(0,0,0,.1);
         .project_title {
             position: absolute;
             top: 140px;

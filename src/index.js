@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-
+import CanvasEffect from './components/CanvasEffect/CanvasEffect.jsx';
 import store from './redux/stores';
 import './common/reset.scss';
 import './common/public.css';
@@ -11,6 +11,7 @@ import './common/public.css';
 // ReactDOM.render(<App />, document.getElementById('root'));
 render(
     <Provider store={store}>
+        <CanvasEffect />
         <App />
     </Provider>
     , document.getElementById('root')
