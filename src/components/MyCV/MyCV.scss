@@ -26,10 +26,10 @@
     width: 0%;
     height: 0%;
     transition: 1s;
-    background: pink;
+    background: rbga(0,0,0,.1);
     font-family: "Lato", Helvetica, Arial, sans-serif;
     z-index: 50;
-    
+    text-align: center;
     .cancel {
       position: absolute;
       right: 40px;
@@ -50,6 +50,37 @@
       cursor: pointer;
       border-color: #000;
       color: #000;
+    }
+    .cv {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        img {
+            height: 100%;
+        }
+        a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            height: 100%;
+            transform: translateX(-50%) translateY(-50%);
+            .down {
+                display: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 50px;
+                height: 50px;
+                margin-left: -25px;
+                margin-top: -25px;
+            }
+        }
+    }
+    .cv:hover .down {
+        display: block;
     }
 }
 .cv_in {

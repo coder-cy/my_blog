@@ -14,7 +14,7 @@ export default class MyVideo extends React.Component {
                 <div className="wrap">
                     <Video autoPlay={false}
                         controls={[]}
-                        poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548256110919&di=bfa121c6519ba1d61d80449a43d5f480&imgtype=0&src=http%3A%2F%2Fupload.shunwang.com%2F2016%2F0526%2F1464230456256.jpg"
+                        poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548354985471&di=df1a7f25e83719a7c260321ca3d72820&imgtype=0&src=http%3A%2F%2Fimg.xker.com%2Fxkerfiles%2Fallimg%2F1506%2F1A3516058-0.jpg"
                         onCanPlayThrough={() => {
                             // Do stuff
                         }}>
