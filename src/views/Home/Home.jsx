@@ -1,13 +1,22 @@
 import React from "react";
 import ProjDetails from "../../components/ProjDetails/ProjDetails.jsx";
-// import MyVideo from "../../components/MyVideo/MyVideo.jsx"
-// import Clock from "../../components/Clock/Clock.jsx";
 import Desktop from "../../components/Desktop/Desktop.jsx";
 import "./Home.scss";
 import blackboard from "../../assets/images/blackboard.jpg";
 import broadcast0 from "../../assets/images/broadcast0.png";
 import service0 from "../../assets/images/service0.png";
 import football0 from "../../assets/images/football0.png";
+
+const bgList = [
+  require("../../assets/images/bg0.jpg"),
+  require("../../assets/images/bg1.jpg"),
+  require("../../assets/images/bg2.jpg"),
+  require("../../assets/images/bg3.jpg"),
+  require("../../assets/images/bg4.jpg"),
+  require("../../assets/images/bg5.jpg"),
+  require("../../assets/images/bg6.jpg"),
+  require("../../assets/images/bg7.jpg"),
+];
 
 const bgIndexList = [];
 for (let i = 0; i < 100; i++) {
@@ -353,6 +362,7 @@ class Home extends React.Component {
       ],
       curShowProjPicList: [],
       curMainInfo: "",
+      curBgIndex: 0,
     };
   }
   componentDidMount() {
@@ -417,21 +427,29 @@ class Home extends React.Component {
       isShowProjDetails: false
     });
   }
+  switchBg() {
+    let { curBgIndex } = this.state;
+    curBgIndex++;
+    if (curBgIndex > 7) {
+      curBgIndex = 0;
+    }
+    this.setState({
+      curBgIndex,
+    });
+  }
   render() {
     return (
       <main id="home_container">
         <div
           style={{
-            backgroundImage: `url(${require("../../assets/images/bg0.jpg")})`,
+            backgroundImage: `url(${require(`../../assets/images/bg${this.state.curBgIndex}.jpg`)})`,
             height: this.state.h + "px",
             opacity: this.state.isShowProjDetails ? '0.2' : '1',
           }}
           className="content_block"
           id="block_1"
         >
-          <Desktop />
-            {/* <Clock />
-            <MyVideo /> */}
+          <Desktop switchBg={this.switchBg.bind(this)} />
         </div>
         <div
           className="content_block"

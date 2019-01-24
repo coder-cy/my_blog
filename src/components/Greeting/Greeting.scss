@@ -1,0 +1,15 @@
+#greeting_container {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    width: 630px;
+    margin-left: -315px;
+    color: #ccc;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    span {
+        text-shadow:  5px 5px 5px #000;
+    }
+}
