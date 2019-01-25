@@ -189,5 +189,14 @@
                 }
             }
         }
+        .footer {
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-family: 'Lato', Helvetica, Arial, sans-serif;
+            color: #999;
+        }
     }
 }

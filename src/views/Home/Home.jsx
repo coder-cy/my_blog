@@ -770,6 +770,7 @@ class Home extends React.Component {
               })}
             </dl>
           </div>
+          <div className="footer">copyright © Yang Tsai 2019. </div>
         </div>
         <ProjDetails
           isShowProjDetails={this.state.isShowProjDetails}
