@@ -17,7 +17,7 @@ export default class ContactMe extends React.Component {
                 <div className="cv">
                     <img alt="" src={require("../../assets/images/cv.jpg")} />
                     <a href={require("../../assets/doc/cy_cv.pdf")} target="__blank" >
-                        <img alt="" className="down" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548354705137&di=206c7b7b6a2e8c832dca8350f0c089ea&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F47%2F86%2F07G58PICbe7_1024.png" />
+                        <img alt="" className="down" src={require("../../assets/images/show.png")} />
                     </a>
                 </div>
             </div>

@@ -69,96 +69,166 @@ class Home extends React.Component {
         {
           title: "Broadcast show",
           isShow: false,
-          intro:
-            "Tech stack: Vue/TypeScript/React/Redux",
+          intro: "PepperTv.com. The pictures are only samples because the company broke.",
           main: broadcast0,
           subList: [
             {
-              src: require("../../assets/images/broadcast1.png"),
+              src: require("../../assets/images/broadcast1.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me, the pictures are only samples."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the broadcast room(PC), including following, charging, watching living vidio, chatting, sending gift and so on."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + React-router + Redux + Webpack",
+                    "Common AJAX",
+                    "Websocket service",
+                    "Videojs + RTMP/HLS",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Follow broadcaster.",
+                    "Charge.",
+                    "Watch living video.",
+                    "Chat online.",
+                    "Send gift.",
+                    "Barrage on video."
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/broadcast2.png"),
+              src: require("../../assets/images/broadcast2.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me, the pictures are only samples."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the homepage(PC), including hot show selection, square and room searching."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + React-router + Redux + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Selection and Preview of hot broadcast show.",
+                    "Search room by broadcast id."
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/broadcast3.png"),
+              src: require("../../assets/images/broadcast3.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me, the pictures are only samples."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the homepage(Mobile), including hot show selection and square."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "(Mobile) Selection and Preview of hot broadcast show",
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/broadcast4.png"),
+              src: require("../../assets/images/broadcast4.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me, the pictures are only samples."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the userpage(Mobile), including followers, charging, show & modify personal information and so on."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Display / Modify user information.",
+                    "Charge."
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/broadcast5.png"),
+              src: require("../../assets/images/broadcast5.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me, the pictures are only samples."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the broadcast room(Mobile), including following, charging, watching living vidio, chatting, sending gift and so on."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + Webpack",
+                    "Websocket service",
+                    "Vue-video-player",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Follow broadcaster.",
+                    "Charge.",
+                    "Watch living video.",
+                    "Chat online.",
+                    "Send gift.",
+                    "Barrage on video."
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/broadcast6.png"),
+              src: require("../../assets/images/broadcast6.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me, the pictures are only samples."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content: "This is the broadcast room(Mobile)"
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + Webpack",
+                    "Common AJAX"
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Shopping mall.",
+                    "Purchase."
+                  ]
                 }
               ]
             }
@@ -167,66 +237,110 @@ class Home extends React.Component {
         {
           title: "IM service",
           isShow: false,
-          intro: "Tech stack: React/Redux",
+          intro: "A B2B project. The pictures are true screenshot.",
           main: service0,
           subList: [
             {
-              src: require("../../assets/images/service1.png"),
+              src: require("../../assets/images/service1.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the guest-end terminal, including selection of services, robot query, sumitting form and so on."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + Redux + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Selection of services.",
+                    "Auto query and answer.",
+                    "Submit query form."
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/service2.png"),
+              src: require("../../assets/images/service2.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the chatting function of guest-end, including sending and receiving message that includes text, speech and picture, auto hint-show and so on."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + Redux + Webpack",
+                    "Websocket service",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Guest-end.",       
+                    "Chatting with serval types of message: text, speech, image, file, video.",
+                    "Auto hint.",
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/service3.png"),
+              src: require("../../assets/images/service3.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the chatting function of guest-end, same as above."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + Redux + Webpack",
+                    "Websocket service",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Guest-end.",       
+                    "Same as previous."
+                  ]
                 }
               ]
             },
             {
-              src: require("../../assets/images/service4.png"),
+              src: require("../../assets/images/service4.jpg"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the score function, which means the user can submit his attitude towards ther service."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + Redux + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Guest-end.",                    
+                    "This is the score module that user can send attitude towards the service."
+                  ]
                 }
               ]
             },
@@ -234,14 +348,27 @@ class Home extends React.Component {
               src: require("../../assets/images/service5.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the sevice-end terminal, including multiple chatting, recording content, transferring to others and so on."
+                  title: "Tech stack",
+                  content: [
+                    "React.js + React-route + Redux + Webpack",
+                    "Websocket service",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Service-end.",
+                    "Multiple chatting with serval types of message: text, speech, image, file, video.",
+                    "Record chat history.",
+                    "Transfer to other server."
+                  ],
                 }
               ]
             },
@@ -249,13 +376,24 @@ class Home extends React.Component {
               src: require("../../assets/images/service6.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content: "This is the login page, including login function,"
+                  title: "Tech stack",
+                  content: [
+                    "React.js + React-router + Redux + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Service-end.",
+                    "Login and verify."
+                  ]
                 }
               ]
             }
@@ -264,21 +402,34 @@ class Home extends React.Component {
         {
           title: "Football games homepage",
           isShow: false,
-          intro: "Tech stack: Vue/TypeScript",
+          intro: "Runxtv.com. The pictures are true screenshot.",
           main: football0,
           subList: [
             {
               src: require("../../assets/images/football1.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "Only user-favorite and sound-play modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "User favorite",
+                    "Sound play"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the game score page, including living score-change, sound-play, user-favorite and so on."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
+                    "Websocket service",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Living game data update.",
+                    "Animation and sound-play when any teams score.",
+                    "User favorite allows to own different collections between login and unlogin status.",
+                  ]
                 }
               ]
             },
@@ -286,14 +437,25 @@ class Home extends React.Component {
               src: require("../../assets/images/football2.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "Only chatting module was developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "Chatting"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the living game page, including chatting, formation display and information broadcast."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
+                    "Websocket service",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Display and update of living game information.",
+                    "Chatting."
+                  ]
                 }
               ]
             },
@@ -301,14 +463,26 @@ class Home extends React.Component {
               src: require("../../assets/images/football3.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All",
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the football library page, including a 3F tree selection, a carousel and a league-displayed block which allows user to select by initial of name."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "League Lib",
+                    "3F Tree selection of all professional leagues on the world.",
+                    "Carousel of hot leagues, which allows to be swipered.",
+                    "Display of all leagues, which allows to be filterd by type and initial of league name."
+                  ]                    
                 }
               ]
             },
@@ -316,14 +490,24 @@ class Home extends React.Component {
               src: require("../../assets/images/football4.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All",
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the league details page of league class, including display of information, selecting by season and round, query pts-ranking and so on."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "(Cup)Display of league information, pts ranking and game schedule.",
+                    "(Cup)Selection of season and round and fetch the living data."
+                  ]
                 }
               ]
             },
@@ -331,14 +515,24 @@ class Home extends React.Component {
               src: require("../../assets/images/football5.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "All of modules were developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "All"
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the league details page of cup class, including display of information, selecting by season and round, query pts-ranking and so on."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "(League)Display of league information, pts ranking and game schedule.",
+                    "(League)Selection of season and round and fetch the living data."
+                  ]
                 }
               ]
             },
@@ -346,14 +540,24 @@ class Home extends React.Component {
               src: require("../../assets/images/football6.png"),
               details: [
                 {
-                  title: "Module",
-                  content:
-                    "Only comment module was developed by me and the picures are true screenshot of the project."
+                  title: "My module",
+                  content: [
+                    "User comment."
+                  ]
                 },
                 {
-                  title: "Intro",
-                  content:
-                    "This is the game news page, including display of news, comment and so on."
+                  title: "Tech stack",
+                  content: [
+                    "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
+                    "Common AJAX",
+                  ]
+                },
+                {
+                  title: "Profile",
+                  content: [
+                    "Display of game news.",
+                    "User comment with both login and unlogin."
+                  ],
                 }
               ]
             }

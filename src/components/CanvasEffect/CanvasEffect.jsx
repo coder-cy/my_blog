@@ -35,7 +35,7 @@ export default class CanvasEffect extends React.Component {
         const w = canvas.width;
         const h = canvas.height;
         const pos = [];
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 50; i++) {
             pos.push({
                 x: parseInt(Math.random() * w),
                 y: parseInt(Math.random() * h),

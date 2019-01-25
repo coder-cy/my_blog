@@ -2,6 +2,8 @@ import React from 'react';
 
 import './ProjDetails.scss';
 
+const symbolList = ["* ", "# ", "- "];
+
 export default class ProjDetails extends React.Component {
     constructor(props) {
         super(props);
@@ -27,15 +29,25 @@ export default class ProjDetails extends React.Component {
                     {
                         this.props.curShowProjPicList.map((proj, i) => {
                             return (
-                                <dd key={i} style={{transform: `rotateY(${i * 60}deg) rotateX(8deg) translateZ(600px) scale(1.2)`}} className="item">
-                                    <img src={proj.src} />
-                                    <ul>
+                                <dd key={i} style={{transform: `rotateY(${i * 60}deg) rotateX(8deg) translateZ(600px)`}} className="item">
+                                    <img alt="" width="500px" height="400px" src={proj.src} />
+                                    <ul className="details">
                                     {
                                         proj.details.map((detail, j) => {
                                             return (
-                                                <li key={j}>
-                                                    <div className="title">{detail.title}</div><br/>
-                                                    <p className="content">{detail.content}</p>
+                                                <li className="details_li" key={j}>
+                                                    <div className="details_title">{detail.title}</div>
+                                                    <ul className="details_content">
+                                                    {
+                                                        detail.content.map((item, k) => {
+                                                            return (
+                                                                <li className="content_li" key={k}>
+                                                                    <i>{symbolList[j]}</i><span>{item}</span>
+                                                                </li>
+                                                            );
+                                                        })
+                                                    }
+                                                    </ul>
                                                 </li>
                                             );
                                         })

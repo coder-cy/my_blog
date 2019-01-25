@@ -64,10 +64,10 @@
     position: absolute;
     right: -80px;
     top: -50px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 50px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
     text-align: center;
     background: transparent;
     color: #fff;
@@ -75,12 +75,11 @@
     font-style: normal;
     border-radius: 50%;
     border: 2px solid #fff;
-    transition: 1s;
+    transition: .5s;
   }
   .cancel:hover {
     cursor: pointer;
-    border-color: #000;
-    color: #000;
+    transform: scale(1.5);
   }
 }
 .video_in {
