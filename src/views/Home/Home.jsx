@@ -580,6 +580,9 @@ class Home extends React.Component {
       });
     })
   }
+  pauseVideo() {
+    document.querySelector(".rh5v-DefaultPlayer_video").pause();
+  }
   onWindowScroll() {
     const tar1 = this.state.h - 200;
     const tar2 = this.state.h + 900 - 200;
@@ -590,12 +593,14 @@ class Home extends React.Component {
             isBgBroken: true
           });
         }
+        this.pauseVideo();
       } else if (window.scrollY >= tar1) {
         if (this.state.isBgBroken) {
           this.setState({
             isBgBroken: false
           });
         }
+        this.pauseVideo();
       } else {
         if (!this.state.isBgBroken) {
           this.setState({
