@@ -237,7 +237,7 @@ class Home extends React.Component {
         {
           title: "IM service",
           isShow: false,
-          intro: "A B2B project. The pictures are true screenshot.",
+          intro: "A B2B project. The pictures are real screenshot.",
           main: service0,
           subList: [
             {
@@ -402,7 +402,7 @@ class Home extends React.Component {
         {
           title: "Football games homepage",
           isShow: false,
-          intro: "Runxtv.com. The pictures are true screenshot.",
+          intro: "Runxtv.com. The pictures are real screenshot.",
           main: football0,
           subList: [
             {
