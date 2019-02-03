@@ -28,7 +28,8 @@ const handleScroll = (number = 0, time) => {
             clearInterval(scrollTimer); // 清除计时器
         }
     }, spacingTime);
-}
+};
+const w = document.documentElement.clientWidth;
 export default class Desktop extends React.Component {
     constructor(props) {
         super(props);
@@ -116,7 +117,6 @@ export default class Desktop extends React.Component {
     handleClickApp(index) {
         const h = document.documentElement.clientHeight;
         const { switchBg } = this.props;
-        // eslint-disable-next-line default-case
         switch (index) {
             case 0:
                 this.setAnimationType(1, "cv");
@@ -135,6 +135,9 @@ export default class Desktop extends React.Component {
                 break;
             case 5:
                 switchBg();
+                break;
+            default:
+                break;
         }
         this.hideCustomCtxMenu();
     }
@@ -151,7 +154,7 @@ export default class Desktop extends React.Component {
         if (e.button === 2) {
             this.setState({
                 isShowCtxMenu: true,
-                menuX: e.clientX,
+                menuX: e.clientX > w - 200 ? e.clientX - 200 : e.clientX,
                 menuY: e.clientY,
             });
         }
