@@ -7,17 +7,6 @@ import broadcast0 from "../../assets/images/broadcast0.png";
 import service0 from "../../assets/images/service0.png";
 import football0 from "../../assets/images/football0.png";
 
-const bgList = [
-  require("../../assets/images/bg0.jpg"),
-  require("../../assets/images/bg1.jpg"),
-  require("../../assets/images/bg2.jpg"),
-  require("../../assets/images/bg3.jpg"),
-  require("../../assets/images/bg4.jpg"),
-  require("../../assets/images/bg5.jpg"),
-  require("../../assets/images/bg6.jpg"),
-  require("../../assets/images/bg7.jpg"),
-];
-
 const bgIndexList = [];
 for (let i = 0; i < 100; i++) {
   bgIndexList.push(i);
@@ -69,7 +58,8 @@ class Home extends React.Component {
         {
           title: "Broadcast show",
           isShow: false,
-          intro: "PepperTv.com. The pictures are only samples because the company broke.",
+          intro:
+            "PepperTv.com. The pictures are only samples because the company broke.",
           main: broadcast0,
           subList: [
             {
@@ -77,9 +67,7 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
@@ -87,7 +75,7 @@ class Home extends React.Component {
                     "React.js + React-router + Redux + Webpack",
                     "Common AJAX",
                     "Websocket service",
-                    "Videojs + RTMP/HLS",
+                    "Videojs + RTMP/HLS"
                   ]
                 },
                 {
@@ -108,15 +96,13 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "React.js + React-router + Redux + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -133,21 +119,19 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
                   title: "Profile",
                   content: [
-                    "(Mobile) Selection and Preview of hot broadcast show",
+                    "(Mobile) Selection and Preview of hot broadcast show"
                   ]
                 }
               ]
@@ -157,23 +141,18 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
                   title: "Profile",
-                  content: [
-                    "Display / Modify user information.",
-                    "Charge."
-                  ]
+                  content: ["Display / Modify user information.", "Charge."]
                 }
               ]
             },
@@ -182,16 +161,14 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + Webpack",
                     "Websocket service",
-                    "Vue-video-player",
+                    "Vue-video-player"
                   ]
                 },
                 {
@@ -212,9 +189,7 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
@@ -225,10 +200,7 @@ class Home extends React.Component {
                 },
                 {
                   title: "Profile",
-                  content: [
-                    "Shopping mall.",
-                    "Purchase."
-                  ]
+                  content: ["Shopping mall.", "Purchase."]
                 }
               ]
             }
@@ -245,16 +217,11 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
-                  content: [
-                    "React.js + Redux + Webpack",
-                    "Common AJAX",
-                  ]
+                  content: ["React.js + Redux + Webpack", "Common AJAX"]
                 },
                 {
                   title: "Profile",
@@ -271,24 +238,22 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "React.js + Redux + Webpack",
                     "Websocket service",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
                   title: "Profile",
                   content: [
-                    "Guest-end.",       
+                    "Guest-end.",
                     "Chatting with serval types of message: text, speech, image, file, video.",
-                    "Auto hint.",
+                    "Auto hint."
                   ]
                 }
               ]
@@ -298,24 +263,19 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "React.js + Redux + Webpack",
                     "Websocket service",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
                   title: "Profile",
-                  content: [
-                    "Guest-end.",       
-                    "Same as previous."
-                  ]
+                  content: ["Guest-end.", "Same as previous."]
                 }
               ]
             },
@@ -324,21 +284,16 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
-                  content: [
-                    "React.js + Redux + Webpack",
-                    "Common AJAX",
-                  ]
+                  content: ["React.js + Redux + Webpack", "Common AJAX"]
                 },
                 {
                   title: "Profile",
                   content: [
-                    "Guest-end.",                    
+                    "Guest-end.",
                     "This is the score module that user can send attitude towards the service."
                   ]
                 }
@@ -349,16 +304,14 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "React.js + React-route + Redux + Webpack",
                     "Websocket service",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -368,7 +321,7 @@ class Home extends React.Component {
                     "Multiple chatting with serval types of message: text, speech, image, file, video.",
                     "Record chat history.",
                     "Transfer to other server."
-                  ],
+                  ]
                 }
               ]
             },
@@ -377,23 +330,18 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "React.js + React-router + Redux + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
                   title: "Profile",
-                  content: [
-                    "Service-end.",
-                    "Login and verify."
-                  ]
+                  content: ["Service-end.", "Login and verify."]
                 }
               ]
             }
@@ -410,17 +358,14 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "User favorite",
-                    "Sound play"
-                  ]
+                  content: ["User favorite", "Sound play"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
                     "Websocket service",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -428,7 +373,7 @@ class Home extends React.Component {
                   content: [
                     "Living game data update.",
                     "Animation and sound-play when any teams score.",
-                    "User favorite allows to own different collections between login and unlogin status.",
+                    "User favorite allows to own different collections between login and unlogin status."
                   ]
                 }
               ]
@@ -438,16 +383,14 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "Chatting"
-                  ]
+                  content: ["Chatting"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
                     "Websocket service",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -464,15 +407,13 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All",
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -482,7 +423,7 @@ class Home extends React.Component {
                     "3F Tree selection of all professional leagues on the world.",
                     "Carousel of hot leagues, which allows to be swipered.",
                     "Display of all leagues, which allows to be filterd by type and initial of league name."
-                  ]                    
+                  ]
                 }
               ]
             },
@@ -491,15 +432,13 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All",
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -516,15 +455,13 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "All"
-                  ]
+                  content: ["All"]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -541,15 +478,13 @@ class Home extends React.Component {
               details: [
                 {
                   title: "My module",
-                  content: [
-                    "User comment."
-                  ]
+                  content: ["User comment."]
                 },
                 {
                   title: "Tech stack",
                   content: [
                     "Vue.js + Vue-router + Vuex + TypeScript + Webpack",
-                    "Common AJAX",
+                    "Common AJAX"
                   ]
                 },
                 {
@@ -557,7 +492,7 @@ class Home extends React.Component {
                   content: [
                     "Display of game news.",
                     "User comment with both login and unlogin."
-                  ],
+                  ]
                 }
               ]
             }
@@ -566,7 +501,7 @@ class Home extends React.Component {
       ],
       curShowProjPicList: [],
       curMainInfo: "",
-      curBgIndex: 0,
+      curBgIndex: 0
     };
   }
   componentDidMount() {
@@ -576,12 +511,9 @@ class Home extends React.Component {
   initScreen() {
     window.addEventListener("resize", () => {
       this.setState({
-        w: document.documentElement.clientWidth,
+        w: document.documentElement.clientWidth
       });
-    })
-  }
-  pauseVideo() {
-    document.querySelector(".rh5v-DefaultPlayer_video").pause();
+    });
   }
   onWindowScroll() {
     const tar1 = this.state.h - 200;
@@ -593,14 +525,14 @@ class Home extends React.Component {
             isBgBroken: true
           });
         }
-        this.pauseVideo();
+        // this.pauseVideo();
       } else if (window.scrollY >= tar1) {
         if (this.state.isBgBroken) {
           this.setState({
             isBgBroken: false
           });
         }
-        this.pauseVideo();
+        // this.pauseVideo();
       } else {
         if (!this.state.isBgBroken) {
           this.setState({
@@ -628,7 +560,7 @@ class Home extends React.Component {
     this.setState({
       isShowProjDetails: true,
       curShowProjPicList: this.state.projectList[index].subList,
-      curMainInfo: this.state.projectList[index].intro,
+      curMainInfo: this.state.projectList[index].intro
     });
   }
   hideProjDetails() {
@@ -643,7 +575,7 @@ class Home extends React.Component {
       curBgIndex = 0;
     }
     this.setState({
-      curBgIndex,
+      curBgIndex
     });
   }
   render() {
@@ -651,9 +583,11 @@ class Home extends React.Component {
       <main id="home_container">
         <div
           style={{
-            backgroundImage: `url(${require(`../../assets/images/bg${this.state.curBgIndex}.jpg`)})`,
+            backgroundImage: `url(${require(`../../assets/images/bg${
+              this.state.curBgIndex
+            }.jpg`)})`,
             height: this.state.h + "px",
-            opacity: this.state.isShowProjDetails ? '0.2' : '1',
+            opacity: this.state.isShowProjDetails ? "0.2" : "1"
           }}
           className="content_block"
           id="block_1"
@@ -662,7 +596,7 @@ class Home extends React.Component {
         </div>
         <div
           className="content_block"
-          style={{opacity: this.state.isShowProjDetails ? '0.2' : '1'}}
+          style={{ opacity: this.state.isShowProjDetails ? "0.2" : "1" }}
           id="block_2"
         >
           {this.state.bgIndexList.map((field, i) => {
@@ -678,8 +612,11 @@ class Home extends React.Component {
                     (i % 10)}px -${90 * Math.floor(i / 10)}px`,
                   transform: this.state.isBgBroken
                     ? `translate3d(${getRandom(1000, 1500) *
-                      getRandomDir()}px,${getRandom(1000, 1500) *
-                        getRandomDir()}px,${getRandom(1000, 1500)}px) rotateX(${getRandom(
+                        getRandomDir()}px,${getRandom(1000, 1500) *
+                        getRandomDir()}px,${getRandom(
+                        1000,
+                        1500
+                      )}px) rotateX(${getRandom(
                         0,
                         360
                       )}deg) rotateY(${getRandom(
@@ -695,15 +632,18 @@ class Home extends React.Component {
             );
           })}
           <div className="self_intro">
-            <div style={{color: this.state.isBgBroken ? '#000' : '#fff'}} className="about_me">ABOUT ME</div>
-            <p style={{color: this.state.isBgBroken ? '#000' : '#fff'}}>
+            <div
+              style={{ color: this.state.isBgBroken ? "#000" : "#fff" }}
+              className="about_me"
+            >
+              ABOUT ME
+            </div>
+            <p style={{ color: this.state.isBgBroken ? "#000" : "#fff" }}>
               My name is Yang Tsai from Shanghai China, I've been working as a
-              front-end developer for 3 years in Shanghai. To achieve my dream I
-              decide to have a new beginning in Germany, I mean, both in life
-              and career. I speak English fluently, meanwhile I'm a person who
-              love to talk ,easy going with and learning German strenuously. I
-              love coding, which may be one of the most fantastic jobs in my
-              thought.
+              front-end developer for 3 years in Shanghai. By scanning this
+              website you can get my details such as my teck-stack, education
+              background and project experience. I love coding, which may be one
+              of the most fantastic jobs in my thought.
             </p>
           </div>
           <div className="self_skill">
@@ -711,7 +651,9 @@ class Home extends React.Component {
               {this.state.skillList.map((skill, i) => {
                 return (
                   <li key={i}>
-                    <dl style={{color: this.state.isBgBroken ? '#000' : '#fff'}}>
+                    <dl
+                      style={{ color: this.state.isBgBroken ? "#000" : "#fff" }}
+                    >
                       <dt>{skill.title}</dt>
                       {skill.contentList.map((content, j) => {
                         return <dd key={j}>{content}</dd>;
@@ -726,9 +668,12 @@ class Home extends React.Component {
         <div
           className="content_block"
           id="block_3"
-          style={{opacity: this.state.isShowProjDetails ? '0.2' : '1'}}
+          style={{ opacity: this.state.isShowProjDetails ? "0.2" : "1" }}
         >
-          <div style={{opacity: this.state.isBgBroken ? '1' : '0'}} className="project_title">
+          <div
+            style={{ opacity: this.state.isBgBroken ? "1" : "0" }}
+            className="project_title"
+          >
             <div>MY LATEST WORK</div>
             <p>
               A selection of recent projects I've been working on, which
@@ -736,7 +681,10 @@ class Home extends React.Component {
               broadcasting-show website and so on.
             </p>
           </div>
-          <div style={{opacity: this.state.isBgBroken ? '1' : '0'}} className="project_details">
+          <div
+            style={{ opacity: this.state.isBgBroken ? "1" : "0" }}
+            className="project_details"
+          >
             <dl>
               {this.state.projectList.map((project, i) => {
                 return (

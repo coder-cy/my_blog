@@ -1,5 +1,5 @@
 import React from 'react';
-import MyVideo from "../MyVideo/MyVideo.jsx"
+import MyGame from "../MyGame/MyGame.jsx"
 import Clock from "../Clock/Clock.jsx";
 import ContactMe from "../ContactMe/ContactMe.jsx";
 import MyCV from "../MyCV/MyCV.jsx";
@@ -37,7 +37,7 @@ export default class Desktop extends React.Component {
             appData: [
                 { img: require("../../assets/images/cv_icon.png") },
                 { img: require("../../assets/images/about_icon.png") },
-                { img: require("../../assets/images/video_icon.png") },
+                { img: require("../../assets/images/game_icon.png") },
                 { img: require("../../assets/images/work_icon.png") },
                 { img: require("../../assets/images/contact_icon.png") },
             ],
@@ -57,6 +57,7 @@ export default class Desktop extends React.Component {
             isShowCtxMenu: false,
             menuX: 0,
             menuY: 0,
+            isPlayingGame: false,
         }
     }
     render() {
@@ -64,7 +65,7 @@ export default class Desktop extends React.Component {
         return (
             <div onClick={() => { this.hideCustomCtxMenu() }} onMouseDown={e => { this.showCustomCtxMenu(e); }} onContextMenu={e => { e.preventDefault(); }} onMouseMove={e => { this.handleMouseMove(e); }} id="desktop_container">
                 <Clock />
-                <MyVideo setAnimationType={this.setAnimationType.bind(this)} animationType={animationType} />
+                <MyGame ref="myGame" initGameStatus={this.initGameStatus.bind(this)} setAnimationType={this.setAnimationType.bind(this)} animationType={animationType} />
                 <ContactMe setAnimationType={this.setAnimationType.bind(this)} animationType={animationType} />
                 <MyCV setAnimationType={this.setAnimationType.bind(this)} animationType={animationType} />
                 <Greeting setAnimationType={this.setAnimationType.bind(this)} />
@@ -125,7 +126,13 @@ export default class Desktop extends React.Component {
                 handleScroll(h, 250);
                 break;
             case 2:
-                this.setAnimationType(1, "video");
+                this.setState({
+                    isPlayingGame: true,
+                });
+                if (!this.state.isPlayingGame) {
+                    this.setAnimationType(1, "video");
+                    this.refs.myGame.initGame();
+                }
                 break;
             case 3:
                 handleScroll(h + 1000, 800);
@@ -140,6 +147,11 @@ export default class Desktop extends React.Component {
                 break;
         }
         this.hideCustomCtxMenu();
+    }
+    initGameStatus() {
+        this.setState({
+            isPlayingGame: false,
+        });
     }
     setAnimationType(type, appName) {
         const { animationType } = this.state;
